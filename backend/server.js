@@ -6,7 +6,9 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://cc-practical-sigma.vercel.app/"
+}));
 
 // 🔗 Connect to MongoDB Atlas
 mongoose.connect("mongodb+srv://me:mePassword@cc.z8ckgiq.mongodb.net/")
