@@ -49,29 +49,12 @@ app.get("/students", async (req, res) => {
 });
 
 
-// ❌ Delete Student (Optional but useful)
-app.delete("/delete/:id", async (req, res) => {
-  try {
-    await Student.findByIdAndDelete(req.params.id);
-    res.send("Student Deleted");
-  } catch (err) {
-    res.status(500).send(err);
-  }
-});
 
-
-// ✏️ Update Student (Optional)
-app.put("/update/:id", async (req, res) => {
-  try {
-    await Student.findByIdAndUpdate(req.params.id, req.body);
-    res.send("Student Updated");
-  } catch (err) {
-    res.status(500).send(err);
-  }
-});
 
 
 // 🚀 Start Server
-app.listen(3000, () => {
-  console.log("🚀 Server running on http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
