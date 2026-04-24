@@ -7,14 +7,14 @@ function App() {
 
   // Fetch students
   const getStudents = async () => {
-    const res = await fetch("http://localhost:3000/students");
+    const res = await fetch("https://cc-practical-backend.onrender.com/students");
     const data = await res.json();
     setStudents(data);
   };
 
   // Add student
   const addStudent = async () => {
-    await fetch("http://localhost:3000/add", {
+    await fetch("https://cc-practical-backend.onrender.com/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
