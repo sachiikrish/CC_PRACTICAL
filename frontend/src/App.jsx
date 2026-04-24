@@ -7,7 +7,7 @@ function App() {
 
   // Fetch students
   const getStudents = async () => {
-    const res = await fetch("https://cc-practical-dnrs.onrender.com/");
+    const res = await fetch("https://cc-practical-dnrs.onrender.com/students");
     const data = await res.json();
     setStudents(data);
   };
