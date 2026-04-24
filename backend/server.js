@@ -11,7 +11,7 @@ app.use(cors({
 }));
 
 // 🔗 Connect to MongoDB Atlas
-mongoose.connect("mongodb+srv://me:mePassword@cc.z8ckgiq.mongodb.net/")
+mongoose.connect("mongodb+srv://me:mePassword@cc.z8ckgiq.mongodb.net/sample")
 .then(() => console.log("✅ MongoDB Connected"))
 .catch((err) => console.log("❌ Connection Error:", err));
 
